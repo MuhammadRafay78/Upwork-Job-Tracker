@@ -21,7 +21,7 @@ const contentMatches = [
 
 export default defineManifest({
   manifest_version: 3,
-  name: "Job Tracker",
+  name: "Upwork Job Tracker",
   version: VERSION,
   icons: {
     16: "icons/icon16.png",

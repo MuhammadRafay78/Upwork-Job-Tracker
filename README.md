@@ -1,10 +1,12 @@
-# Job Tracker
+# Upwork Job Tracker
 
 **Track the opportunity, not the website where you found it.**
 
 A job search rarely stays in one place. The same opportunity can appear in a search, return under a new URL, arrive by email, and become an application whose history is scattered across bookmarks, notes, and inbox messages. Spreadsheets and generic project boards can store those fragments, but leave you to connect them.
 
 Job Tracker is a self-hosted workspace built around one lasting record per job. Listings, status changes, notes, decisions, and materials stay attached to that opportunity. A browser extension captures details and reliable lifecycle updates, while a local Kanban dashboard keeps the process visible and under your control.
+
+This project is a fork of [Muatasim-Aswad/job-tracker](https://github.com/Muatasim-Aswad/job-tracker) (MIT licensed), adding a built-in Upwork integration on top of its existing adapter model, self-hosted API, and Kanban dashboard. See [`NOTICE.md`](NOTICE.md) for attribution details and what's changed so far.
 
 ![Job Tracker overview](docs/images/social-preview.png)
 
@@ -26,6 +28,7 @@ Job Tracker is a self-hosted workspace built around one lasting record per job. 
 | --- | --- |
 | LinkedIn jobs | Listing capture and in-page triage on search cards and job details |
 | LinkedIn job emails in Gmail | Recognizes supported messages and adds tracker actions |
+| Upwork jobs | Scaffolded, not yet hardened — id/URL capture works, rich field scraping (budget, client, skills, description) needs real fixtures. See [the adapter's fixtures README](apps/extension/src/adapters/builtin/upwork/fixtures/README.md) |
 | Sites without a built-in integration | Add a job manually from the popup |
 
 LinkedIn and supported LinkedIn job emails in Gmail are the only built-in integrations today. The integration layer is designed to support additional built-in or private/local adapters without changing the core job model.

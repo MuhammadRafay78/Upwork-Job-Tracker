@@ -17,6 +17,14 @@ const REGISTRY: Record<string, PlatformMeta> = {
     buildUrl: (id) => `https://www.linkedin.com/jobs/view/${id}/`,
     directLink: true,
   },
+  // Upwork's bare `/jobs/~<id>` short link redirects to the full slugged posting
+  // URL, so the id alone is sufficient to rebuild a working link — same shape as
+  // LinkedIn's numeric id, just an opaque token instead of a number.
+  upwork: {
+    label: "Upwork",
+    buildUrl: (id) => `https://www.upwork.com/jobs/~${id}`,
+    directLink: true,
+  },
   manual: { label: "Manual" },
 };
 

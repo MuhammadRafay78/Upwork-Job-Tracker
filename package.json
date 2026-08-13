@@ -1,5 +1,5 @@
 {
-  "name": "job-tracker",
+  "name": "upwork-job-tracker",
   "private": true,
   "type": "module",
   "scripts": {

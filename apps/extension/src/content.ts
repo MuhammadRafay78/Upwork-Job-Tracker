@@ -4,6 +4,7 @@ import { setAdapters } from "./registry.js";
 import { start } from "./engine.js";
 import { linkedinAdapter } from "./adapters/builtin/linkedin/web.js";
 import { gmailAdapter } from "./adapters/builtin/linkedin/gmail.js";
+import { upworkAdapter } from "./adapters/builtin/upwork/web.js";
 
 // Exclude colocated tests and their Node-only imports from the content bundle.
 const localAdapterModules = import.meta.glob<Record<string, unknown>>(
@@ -18,7 +19,7 @@ const localAdapters = Object.values(localAdapterModules).flatMap((mod) =>
 
 // Local adapters take precedence over generic built-in host matches.
 function boot() {
-  setAdapters([...localAdapters, linkedinAdapter, gmailAdapter]);
+  setAdapters([...localAdapters, linkedinAdapter, gmailAdapter, upworkAdapter]);
   start();
 }
 
