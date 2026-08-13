@@ -6,12 +6,12 @@ version = "0.1.0"
 description = "Local FastAPI backend for the personal job tracker"
 requires-python = ">=3.14"
 dependencies = [
-    "fastapi>=0.141.0",
+    "fastapi>=0.141.1",
     "libsql>=0.1.11",
     "pyturso>=0.7.2",
     "pydantic>=2.13.4",
     "pydantic-settings>=2.14.2",
-    "uvicorn[standard]>=0.52.1",
+    "uvicorn[standard]>=0.52.3",
 ]
 
 [project.scripts]
